@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Parcel Tracker</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Leaflet Map -->
+
+<link
+rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+📦 Parcel Tracker
+</div>
+
+<nav id="navMenu">
+
+<a href="#">Tracking</a>
+<a href="#">Carriers</a>
+<a href="#">Help</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+</nav>
+
+<button class="menu-btn" onclick="toggleMenu()">
+☰
+</button>
+
+<button class="dark-btn" onclick="toggleDarkMode()">
+🌙
+</button>
+
+</header>
+
+<section class="hero">
+
+<h1>Track Any Package Worldwide</h1>
+
+<p>
+Enter tracking number to view shipment details
+</p>
+
+<div class="tracking-box">
+
+<input
+type="text"
+id="trackingNumber"
+placeholder="Enter Tracking Number">
+
+<select id="carrier">
+
+<option>DHL</option>
+<option>FedEx</option>
+<option>UPS</option>
+<option>USPS</option>
+<option>Amazon</option>
+
+</select>
+
+<button onclick="trackParcel()">
+
+Track Package
+
+</button>
+
+</div>
+<div class="truck">
+  🚚
+</div>
+<!-- RESULT PANEL -->
+<div id="loader" class="loader"></div>
+
+<div id="resultBox" class="result-box"></div>
+
+<!-- PROGRESS BAR -->
+
+<div id="progressContainer">
+
+<div id="progressBar"></div>
+
+</div>
+
+<!-- TIMELINE -->
+
+<div id="timeline" class="timeline"></div>
+<h3>Search History</h3>
+
+<ul id="history"></ul>
+</section>
+
+<!-- MAP -->
+
+<section class="map-section">
+
+<h2 style="color:#0052cc;">
+Shipment Route
+</h2>
+
+<div id="map"></div>
+
+</section>
+
+<!-- CARRIERS -->
+
+<section class="carriers">
+
+<h2 style="color:#0052cc;">
+Supported Carriers
+</h2>
+<div class="carrier-grid">
+
+<img src="logos/dhl.png">
+<img src="logos/fedex.png">
+<img src="logos/ups.png">
+<img src="logos/usps.png">
+<img src="logos/amazon.png">
+<img src="logos/ems.png">
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Parcel Tracker
+
+</p>
+
+</footer>
+
+<script
+src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+</script>
+
+<script src="script.js"></script>
+<div id="notification" class="notification">
+Tracking Updated!
+</div>
+
+<button class="fab"
+onclick="scrollToTop()">
+
+⬆
+
+</button>
+
+</body>
+
+</html>

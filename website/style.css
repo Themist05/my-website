@@ -1,0 +1,487 @@
+/* GENERAL */
+
+body {
+
+margin: 0;
+font-family: 'Segoe UI', sans-serif;
+
+background: #f4f7fb;
+
+transition: 0.3s;
+
+}
+
+/* DARK MODE */
+
+.dark {
+
+background: #121212;
+color: white;
+
+}
+
+/* HEADER */
+
+header {
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 15px 30px;
+
+background: linear-gradient(
+90deg,
+#0b3d91,
+#0052cc
+);
+
+color: white;
+
+}
+
+.logo {
+
+font-size: 24px;
+font-weight: bold;
+
+}
+
+nav a {
+
+margin-left: 20px;
+
+text-decoration: none;
+
+color: white;
+
+font-weight: 500;
+
+}
+
+nav a:hover {
+
+opacity: 0.8;
+
+}
+
+/* HERO SECTION */
+
+.hero {
+
+text-align: center;
+
+padding: 80px 20px;
+
+background: linear-gradient(
+135deg,
+#0052cc,
+#00b4ff
+);
+
+color: white;
+
+}
+
+.hero h1 {
+
+font-size: 44px;
+
+margin-bottom: 10px;
+
+}
+
+.hero p {
+
+font-size: 18px;
+
+}
+
+/* TRACK BOX */
+
+.tracking-box {
+
+margin-top: 25px;
+
+}
+
+.tracking-box input {
+
+padding: 15px;
+
+width: 320px;
+
+border-radius: 6px;
+
+border: none;
+
+font-size: 16px;
+
+}
+
+.tracking-box button {
+
+padding: 15px 30px;
+
+background: linear-gradient(
+90deg,
+#ff7a18,
+#ffb347
+);
+
+color: white;
+
+border: none;
+
+border-radius: 6px;
+
+font-size: 16px;
+
+cursor: pointer;
+
+margin-left: 10px;
+
+}
+
+.tracking-box button:hover {
+
+opacity: 0.9;
+
+}
+
+/* RESULT BOX */
+
+.result-box {
+
+margin-top: 30px;
+
+padding: 25px;
+
+background: white;
+
+border-radius: 10px;
+
+box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+
+display: none;
+
+max-width: 450px;
+
+margin-left: auto;
+margin-right: auto;
+
+}
+
+/* PROGRESS BAR */
+
+#progressContainer {
+
+width: 80%;
+
+height: 14px;
+
+background: #ddd;
+
+margin: 25px auto;
+
+border-radius: 8px;
+
+overflow: hidden;
+
+}
+
+#progressBar {
+
+height: 14px;
+
+width: 0%;
+
+background: linear-gradient(
+90deg,
+#00c853,
+#64dd17
+);
+
+border-radius: 8px;
+
+transition: width 0.5s;
+
+}
+
+/* TIMELINE */
+
+.timeline {
+
+max-width: 500px;
+
+margin: auto;
+
+text-align: left;
+
+padding: 20px;
+
+}
+
+.timeline div {
+
+background: white;
+
+color: black;
+
+padding: 12px;
+
+border-left: 5px solid #00b4ff;
+
+margin-bottom: 12px;
+
+border-radius: 6px;
+
+box-shadow: 0px 3px 10px rgba(0,0,0,0.08);
+
+font-weight: 500;
+
+}
+/* MAP */
+
+.map-section {
+
+padding: 60px 20px;
+
+background: #eef3ff;
+
+text-align: center;
+
+}
+
+#map {
+
+height: 420px;
+
+max-width: 900px;
+
+margin: auto;
+
+border-radius: 12px;
+
+box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+
+}
+
+/* SEARCH HISTORY */
+
+#history {
+
+list-style: none;
+
+padding: 0;
+
+max-width: 400px;
+
+margin: auto;
+
+}
+
+#history li {
+
+background: #ffffff;
+
+padding: 10px;
+
+margin-bottom: 8px;
+
+border-radius: 6px;
+
+box-shadow: 0px 3px 8px rgba(0,0,0,0.08);
+
+}
+
+/* CARRIERS */
+
+.carriers {
+
+background: white;
+
+padding: 60px 20px;
+
+text-align: center;
+
+}
+
+.carrier-grid {
+
+display: grid;
+
+grid-template-columns:
+repeat(auto-fit, minmax(120px, 1fr));
+
+gap: 25px;
+
+max-width: 700px;
+
+margin: auto;
+
+}
+
+.carrier-grid img {
+
+width: 100%;
+
+max-width: 120px;
+
+background: #f7f9ff;
+
+padding: 15px;
+
+border-radius: 10px;
+
+transition: 0.3s;
+
+}
+
+.carrier-grid img:hover {
+
+transform: scale(1.05);
+
+}
+
+/* FOOTER */
+
+footer {
+
+text-align: center;
+
+padding: 25px;
+
+background: linear-gradient(
+90deg,
+#0b3d91,
+#0052cc
+);
+
+color: white;
+
+}
+/* LOADER */
+
+.loader {
+
+border: 6px solid #f3f3f3;
+
+border-top: 6px solid #0052cc;
+
+border-radius: 50%;
+
+width: 50px;
+
+height: 50px;
+
+animation: spin 1s linear infinite;
+
+margin: 30px auto;
+
+display: none;
+
+}
+
+@keyframes spin {
+
+0% { transform: rotate(0deg); }
+
+100% { transform: rotate(360deg); }
+
+}
+/* NOTIFICATION */
+
+.notification {
+
+position: fixed;
+
+top: 20px;
+
+right: 20px;
+
+background: #00c853;
+
+color: white;
+
+padding: 15px 25px;
+
+border-radius: 6px;
+
+display: none;
+
+box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+
+}
+select {
+
+padding: 14px;
+
+margin-left: 10px;
+
+border-radius: 6px;
+
+border: none;
+
+}
+/* FLOAT BUTTON */
+
+.fab {
+
+position: fixed;
+
+bottom: 20px;
+
+right: 20px;
+
+background: #0052cc;
+
+color: white;
+
+border: none;
+
+width: 50px;
+
+height: 50px;
+
+border-radius: 50%;
+
+font-size: 20px;
+
+cursor: pointer;
+
+}
+/* SCAN EFFECT */
+
+.result-box {
+
+animation: fadeIn 0.5s ease;
+
+}
+
+@keyframes fadeIn {
+
+from { opacity: 0; }
+
+to { opacity: 1; }
+
+}
+/* TRUCK ANIMATION */
+
+.truck {
+
+font-size: 40px;
+
+margin-top: 30px;
+
+animation: drive 6s linear infinite;
+
+}
+
+@keyframes drive {
+
+0% { transform: translateX(-200px); }
+
+100% { transform: translateX(200px); }
+
+}
